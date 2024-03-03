@@ -1,0 +1,29 @@
+@use '../util/mixins' as bp;
+
+.heading-primary {
+	font-size: 6rem;
+	color: var(--color-light-1);
+	line-height: 1.5;
+
+	@include bp.breakpoint(lg) {
+		font-size: 4rem;
+	}
+}
+
+.text-primary {
+	font-size: 1.8rem;
+	line-height: 1.7;
+
+	@include bp.breakpoint(lg) {
+		font-size: 1.6rem;
+	}
+
+	&--main {
+		width: 70%;
+		color: rgba(255, 255, 255, 0.6);
+
+		@include bp.breakpoint(md) {
+			width: 100%;
+		}
+	}
+}

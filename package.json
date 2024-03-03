@@ -1,0 +1,11 @@
+{
+	"name": "law-firm-landing-page",
+	"version": "1.0.0",
+	"description": "Landing page of law firm is simple overview of company practices and what company has to offer.",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass scss/main.scss style/style.css -w"
+	},
+	"author": "law firm, lawfirm landing page",
+	"license": "ISC"
+}

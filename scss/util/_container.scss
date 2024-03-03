@@ -1,0 +1,10 @@
+@use '../util/mixins' as bp;
+
+.container {
+	max-width: 114rem;
+	margin: 0 auto;
+
+	@include bp.breakpoint(lg) {
+		padding: 0 5%;
+	}
+}

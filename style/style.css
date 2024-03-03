@@ -1,0 +1,263 @@
+:root {
+  --color-primary: #cf9455;
+  --color-primary-rgb: 207, 148, 85;
+  --color-secondary: #282e3f;
+  --color-secondary-rgb: 40, 46, 63;
+  --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
+  --color-light-1: #f7f7f7;
+  --color-dark-1: #424242;
+  --color-dark-2: #212121;
+  --gradient-overlay: rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  color: var(--color-light-1);
+  line-height: 1.5;
+}
+@media (max-width: 64em) {
+  .heading-primary {
+    font-size: 4rem;
+  }
+}
+
+.text-primary {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+@media (max-width: 64em) {
+  .text-primary {
+    font-size: 1.6rem;
+  }
+}
+.text-primary--main {
+  width: 70%;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 48em) {
+  .text-primary--main {
+    width: 100%;
+  }
+}
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background: none;
+  padding: 1.6rem 2.4rem;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 64em) {
+  .btn, .btn:link, .btn:visited {
+    font-size: 1.4rem;
+    padding: 1.4rem 2.2rem;
+  }
+}
+.btn--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.btn--primary:hover, .btn--primary:active {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  height: 100dvh;
+  background-color: var(--color-dark-2);
+  background-image: linear-gradient(var(--gradient-overlay)), url(/images/hero-1.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+.header__hero {
+  display: grid;
+  place-content: center;
+}
+.header__text-box {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.2rem;
+  max-width: calc(100% - 30rem);
+}
+@media (max-width: 48em) {
+  .header__text-box {
+    max-width: calc(100% - 25rem);
+  }
+}
+@media (max-width: 36.25em) {
+  .header__text-box {
+    max-width: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+}
+.nav .hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.nav__logo {
+  width: 20rem;
+}
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s ease-in;
+}
+.nav__list button {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+@media (max-width: 48em) {
+  .nav__list {
+    padding: 0 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background: rgba(var(--color-primary-rgb), 0.7);
+    z-index: 2;
+  }
+}
+.nav__link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--color-light-1);
+}
+@media (max-width: 48em) {
+  .nav__link {
+    font-size: 3rem;
+  }
+}
+.nav button {
+  background: none;
+  border: none;
+  color: var(--color-light-1);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 48em) {
+  .nav button {
+    display: block;
+  }
+}
+.nav i {
+  font-size: 3rem;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+@media (max-width: 64em) {
+  .container {
+    padding: 0 5%;
+  }
+}
+
+.mt-sm {
+  margin-top: 2rem;
+}
+
+.mt-md {
+  margin-top: 3rem;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  transition: all 0.3s ease-in;
+}
+
+/*# sourceMappingURL=style.css.map */

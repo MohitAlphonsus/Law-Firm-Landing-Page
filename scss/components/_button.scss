@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as var;
+@use '../util/mixins' as bp;
+
+.btn {
+	&,
+	&:link,
+	&:visited {
+		display: inline-block;
+		text-decoration: none;
+		background: none;
+		padding: 1.6rem 2.4rem;
+		border-radius: 3px;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+		box-shadow: var.$default-button-shadow;
+
+		@include bp.breakpoint(lg) {
+			font-size: 1.4rem;
+			padding: 1.4rem 2.2rem;
+		}
+	}
+
+	&--primary {
+		color: var(--color-white);
+		background-color: var(--color-primary);
+		border: 1px solid var(--color-primary);
+	}
+
+	&--primary:hover,
+	&--primary:active {
+		transform: translateY(-0.5rem);
+		box-shadow: var.$on-hover-button-shadow;
+	}
+}

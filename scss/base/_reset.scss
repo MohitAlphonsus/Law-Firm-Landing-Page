@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as var;
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var.$font-regular;
+	-webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+img,
+picture,
+video,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+	font-family: var.$font-heading;
+}

@@ -1,0 +1,18 @@
+//? max-width
+// sm:580px
+// md:768px
+// lg:1024px
+// xl:1280px
+
+$breakpoints-down: (
+	'xl': 80em,
+	'lg': 64em,
+	'md': 48em,
+	'sm': 36.25em,
+);
+
+@mixin breakpoint($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
