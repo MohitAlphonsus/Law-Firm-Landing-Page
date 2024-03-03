@@ -15,8 +15,8 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		cursor: pointer;
-		transition: all 0.2s ease-in;
 		box-shadow: var.$default-button-shadow;
+		transition: all 0.2s ease-in;
 
 		@include bp.breakpoint(lg) {
 			font-size: 1.4rem;
@@ -32,7 +32,20 @@
 
 	&--primary:hover,
 	&--primary:active {
-		transform: translateY(-0.5rem);
-		box-shadow: var.$on-hover-button-shadow;
+		box-shadow: var.$secondary-button-shadow;
+		border: 1px solid var(--color-primary);
+
+		background: transparent;
+	}
+
+	&--secondary {
+		box-shadow: var.$secondary-button-shadow;
+		border: 1px solid var(--color-primary);
+	}
+
+	&--secondary:hover,
+	&--secondary:active {
+		background-color: var(--color-primary);
+		color: var(--color-white);
 	}
 }

@@ -1,0 +1,14 @@
+@use '../util/mixins' as bp;
+
+.section-about,
+.section-practices {
+	padding: 12rem 0;
+
+	@include bp.breakpoint(md) {
+		padding: 10rem 0;
+	}
+
+	@include bp.breakpoint(sm) {
+		padding: 8rem 0;
+	}
+}
