@@ -5,7 +5,8 @@
 .section-why-us,
 .section-showcase,
 .section-team,
-.section-testimonials {
+.section-testimonials,
+.footer {
 	padding: 12rem 0;
 
 	@include bp.breakpoint(md) {
