@@ -428,14 +428,105 @@
 		</section>
 		<!-- section team end -->
 
+		<section class="section-testimonials">
+			<div class="container container-border">
+				<div class="text-center">
+					<span class="sub-heading">Words from our clients</span>
+					<h2 class="heading-secondary">Testimonials</h2>
+				</div>
+
+				<div class="swiper testimonial-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="testimonial">
+								<i class="fa-solid fa-quote-left"></i>
+								<blockquote class="testimonial__text">
+									Our experience with Veritas in navigating complex corporate
+									legal matters has been nothing short of outstanding. Their
+									team's deep understanding of business law, coupled with their
+									strategic insights, has been instrumental in our company's
+									success. From contract negotiations to mergers, Veritas has
+									consistently provided expert guidance that aligns with our
+									corporate goals. We consider them an integral part of our
+									business team.
+								</blockquote>
+								<div class="testimonial__client">
+									<div
+										class="testimonial__client--image testimonial__client--image--1"
+										role="img"
+									>
+										&nbsp;
+									</div>
+									<span>David Rodriguez, CEO</span>
+									<span>Corporate Law</span>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="swiper-slide">
+							<div class="testimonial">
+								<i class="fa-solid fa-quote-left"></i>
+								<blockquote class="testimonial__text">
+									I cannot thank Veritas enough for their exceptional
+									representation in my personal injury case. Their team's
+									dedication to my well-being and tireless pursuit of justice
+									resulted in a settlement that covered my medical expenses and
+									provided the financial support I needed during a challenging
+									time. Compassionate, professional, and relentless – they truly
+									are advocates for the injured.
+								</blockquote>
+								<div class="testimonial__client">
+									<div
+										class="testimonial__client--image testimonial__client--image--2"
+										role="img"
+									>
+										&nbsp;
+									</div>
+									<span>Sarah Thompson</span>
+									<span>Personal Injury Law</span>
+								</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="swiper-slide">
+							<div class="testimonial">
+								<i class="fa-solid fa-quote-left"></i>
+								<blockquote class="testimonial__text">
+									When I faced the challenging process of divorce, Veritas stood
+									by me with unwavering support and expertise. Their family law
+									attorneys not only provided legal guidance but also
+									demonstrated genuine care for my well-being. They navigated
+									the complexities of child custody and asset division with
+									professionalism and empathy. Veritas made a difficult chapter
+									more manageable, and I am grateful for their exceptional
+									service.
+								</blockquote>
+								<div class="testimonial__client">
+									<div
+										class="testimonial__client--image testimonial__client--image--3"
+										role="img"
+									>
+										&nbsp;
+									</div>
+									<span>Emily Johnson</span>
+									<span> Family Law</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
 		<!-- swiper -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			const swiper = new Swiper('.lawyers-swiper', {
 				slidesPerView: 1,
-
+				spaceBetween: 20,
 				freeMode: true,
-				edgeSwipeThreshold: 10,
+
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
@@ -449,6 +540,16 @@
 						slidesPerView: 3,
 						spaceBetween: 30,
 					},
+				},
+			});
+
+			const testimonialSwiper = new Swiper('.testimonial-swiper', {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				freeMode: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
 				},
 			});
 		</script>

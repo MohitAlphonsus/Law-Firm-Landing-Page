@@ -294,7 +294,8 @@ h6 {
 .section-practices,
 .section-why-us,
 .section-showcase,
-.section-team {
+.section-team,
+.section-testimonials {
   padding: 12rem 0;
 }
 @media (max-width: 48em) {
@@ -302,7 +303,8 @@ h6 {
   .section-practices,
   .section-why-us,
   .section-showcase,
-  .section-team {
+  .section-team,
+  .section-testimonials {
     padding: 10rem 0;
   }
 }
@@ -311,7 +313,8 @@ h6 {
   .section-practices,
   .section-why-us,
   .section-showcase,
-  .section-team {
+  .section-team,
+  .section-testimonials {
     padding: 8rem 0;
   }
 }
@@ -544,6 +547,68 @@ h6 {
   color: var(--color-light-1);
 }
 
+.section-testimonials {
+  background: linear-gradient(to right bottom, rgba(var(--color-secondary-rgb), 0.9), rgba(var(--color-secondary-rgb), 0.9)), url(/images/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: var(--color-light-1);
+}
+.section-testimonials span:first-child {
+  color: var(--color-primary);
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.testimonial i {
+  font-size: 7rem;
+  color: rgba(var(--color-primary-rgb), 0.4);
+}
+.testimonial__text {
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+.testimonial__client {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+  column-gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial__client span:not(:last-child) {
+  font-size: 1.4rem;
+}
+.testimonial__client span:last-child {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+.testimonial__client--image {
+  height: 5rem;
+  width: 5em;
+  border-radius: 50%;
+  outline: 1px dotted var(--color-primary);
+  outline-offset: 0.2rem;
+  grid-row: 1/-1;
+}
+.testimonial__client--image--1 {
+  background: url(/images/client-1.jpg) no-repeat center center/cover;
+}
+.testimonial__client--image--2 {
+  background: url(/images/client-2.jpg) no-repeat center center/cover;
+}
+.testimonial__client--image--3 {
+  background: url(/images/client-3.jpg) no-repeat center center/cover;
+}
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -552,6 +617,11 @@ h6 {
   .container {
     padding: 0 5%;
   }
+}
+
+.container-border {
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  padding: 8rem 4rem;
 }
 
 .mt-sm {
@@ -597,6 +667,10 @@ h6 {
   backdrop-filter: blur(10px);
   z-index: 1;
   transition: all 0.3s ease-in;
+}
+
+.testimonial-swiper {
+  padding: 4rem 0;
 }
 
 .swiper {

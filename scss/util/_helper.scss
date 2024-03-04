@@ -1,3 +1,19 @@
+@use '../util/mixins' as bp;
+
+.container {
+	max-width: 114rem;
+	margin: 0 auto;
+
+	@include bp.breakpoint(lg) {
+		padding: 0 5%;
+	}
+}
+
+.container-border {
+	border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+	padding: 8rem 4rem;
+}
+
 .mt-sm {
 	margin-top: 2rem;
 }
@@ -44,6 +60,10 @@
 }
 
 // SWIPER
+.testimonial-swiper {
+	padding: 4rem 0;
+}
+
 .swiper {
 	width: 100%;
 }
@@ -52,7 +72,6 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
-	// gap: 4rem;
 }
 
 .swiper-slide {
