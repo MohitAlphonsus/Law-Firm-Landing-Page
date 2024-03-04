@@ -2,26 +2,21 @@
 @use '../util/mixins' as bp;
 
 .btn {
-	&,
-	&:link,
-	&:visited {
-		display: inline-block;
-		text-decoration: none;
-		background: none;
-		padding: 1.6rem 2.4rem;
-		border-radius: 3px;
-		font-size: 1.6rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		cursor: pointer;
-		box-shadow: var.$default-button-shadow;
-		transition: all 0.2s ease-in;
+	display: inline-block;
+	background: none;
+	padding: 1.6rem 2.4rem;
+	border-radius: 3px;
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: var.$default-button-shadow;
+	transition: all 0.2s ease-in;
 
-		@include bp.breakpoint(lg) {
-			font-size: 1.4rem;
-			padding: 1.4rem 2.2rem;
-		}
+	@include bp.breakpoint(lg) {
+		font-size: 1.4rem;
+		padding: 1.4rem 2.2rem;
 	}
 
 	&--primary {
@@ -47,5 +42,22 @@
 	&--secondary:active {
 		background-color: var(--color-primary);
 		color: var(--color-white);
+	}
+}
+
+.btn-link:link,
+.btn-link:visited {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--color-primary);
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-bottom: 1px solid currentColor;
+	transition: all 0.3s ease-in;
+
+	&:hover,
+	&:active {
+		letter-spacing: 2px;
 	}
 }

@@ -1,0 +1,22 @@
+@use '../util/mixins' as bp;
+
+.reasons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4rem;
+
+	@include bp.breakpoint(md) {
+		grid-template-columns: 1fr;
+	}
+
+	&__reason {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		span {
+			font-size: 6rem;
+			color: var(--color-primary);
+		}
+	}
+}

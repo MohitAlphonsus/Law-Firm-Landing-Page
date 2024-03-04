@@ -1,0 +1,112 @@
+.team {
+	&__lawyer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: calc(100% - 50%);
+			z-index: -1;
+		}
+
+		&::before {
+			background-color: rgba(var(--color-primary-rgb), 0.06);
+			top: 0;
+			left: 0;
+			border-bottom-left-radius: 50%;
+			border-bottom-right-radius: 50%;
+		}
+
+		&::after {
+			background-color: rgba(var(--color-primary-rgb), 0.15);
+			bottom: 0;
+			left: 0;
+			border-top-left-radius: 50%;
+			border-top-right-radius: 50%;
+		}
+
+		&--name {
+			padding: 4rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			span:first-child {
+				font-size: 3rem;
+			}
+
+			span:last-child {
+				font-size: 1.8rem;
+				opacity: 0.9;
+				color: var(--color-primary);
+				margin-top: 1rem;
+			}
+		}
+
+		&--image {
+			height: 25rem;
+			width: 25rem;
+			border-radius: 50%;
+			outline: 0.5rem solid var(--color-primary);
+			outline-offset: 1rem;
+
+			background-repeat: no-repeat;
+			background-position: 100% 18%;
+			background-size: cover;
+
+			&--1 {
+				background-image: url(/images/team-1.jpg);
+			}
+			&--2 {
+				background-image: url(/images/team-2.jpg);
+			}
+			&--3 {
+				background-image: url(/images/team-3.jpg);
+			}
+			&--4 {
+				background-image: url(/images/team-4.jpg);
+			}
+			&--5 {
+				background-image: url(/images/team-5.jpg);
+			}
+			&--6 {
+				background-image: url(/images/team-6.jpg);
+			}
+		}
+
+		&--contact {
+			padding: 4rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+
+			span {
+				height: 4rem;
+				width: 4rem;
+				border-radius: 50%;
+				background-color: var(--color-primary);
+
+				display: inline-grid;
+				place-content: center;
+				cursor: pointer;
+				transition: all 0.2s ease-in;
+
+				&:hover {
+					filter: brightness(120%);
+				}
+			}
+
+			i {
+				font-size: 1.8rem;
+				color: var(--color-light-1);
+			}
+		}
+	}
+}

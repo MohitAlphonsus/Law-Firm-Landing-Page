@@ -1,3 +1,5 @@
+@use '../util/mixins' as bp;
+
 .section-practices {
 	background-color: var(--color-light-1);
 }
@@ -7,4 +9,31 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	gap: 4rem;
+
+	@include bp.breakpoint(md) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	@include bp.breakpoint(sm) {
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 6rem;
+	}
+
+	&__practice-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		text-align: center;
+
+		i {
+			font-size: 4rem;
+			color: var(--color-primary);
+		}
+
+		a {
+			margin-top: auto;
+		}
+	}
 }

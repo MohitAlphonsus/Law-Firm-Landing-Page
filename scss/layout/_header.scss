@@ -23,6 +23,7 @@
 		align-items: start;
 		gap: 1.2rem;
 		max-width: calc(100% - 30rem);
+		color: var(--color-light-1);
 
 		@include bp.breakpoint(lg) {
 		}

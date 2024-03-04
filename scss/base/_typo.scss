@@ -14,19 +14,46 @@
 	font-size: 4rem;
 }
 
+.heading-quatarnary {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
 .sub-heading {
+	display: inline-block;
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 1.2rem;
 	letter-spacing: 1px;
+	position: relative;
+	margin-left: 3rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: -3.5rem;
+
+		transform: translate(0, -50%);
+		height: 1px;
+		width: 3rem;
+		background-color: currentColor;
+	}
 }
 
 .text-primary {
-	font-size: 1.8rem;
 	line-height: 1.7;
 
 	@include bp.breakpoint(lg) {
 		font-size: 1.6rem;
+	}
+
+	&--base {
+		font-size: 1.8rem;
+	}
+
+	&--small {
+		font-size: 1.4rem;
 	}
 
 	&--main {

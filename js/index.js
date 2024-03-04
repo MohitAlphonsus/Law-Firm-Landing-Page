@@ -1,3 +1,4 @@
+'use strict';
 const openMenuBtn = document.getElementById('open-menu');
 const closeMenuBtn = document.getElementById('close-menu');
 const navListEl = document.getElementById('nav-list');
